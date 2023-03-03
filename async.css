@@ -1,0 +1,10 @@
+.card {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+}
+
+#draw-button {
+    position: fixed;
+    left: 50%;
+}
