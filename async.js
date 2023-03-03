@@ -1,50 +1,50 @@
 // part 1
 
-// let two = document.getElementById('2');
+let two = document.getElementById('2');
 
-// let three = document.getElementById('3');
+let three = document.getElementById('3');
 
-// async function getNumberFact(num){
-//     const {data} = await axios.get(`http://www.numbersapi.com/${num}?json`)
-//     console.log(data.text)
-// }
+async function getNumberFact(num){
+    const {data} = await axios.get(`http://www.numbersapi.com/${num}?json`)
+    console.log(data.text)
+}
 
-// async function getMultipleNumbers(min, max){
-//     try{
-//         const {data} = await axios.get(`http://www.numbersapi.com/${min}..${max}?json`)
-//         for(let fact in data){
-//             newLi = document.createElement('li');
-//             newLi.innerText = data[fact];
-//             two.append(newLi);
-//         }
-//     } catch (e) {
-//         console.log('Error: ' + e)
-//     }
-// }
+async function getMultipleNumbers(min, max){
+    try{
+        const {data} = await axios.get(`http://www.numbersapi.com/${min}..${max}?json`)
+        for(let fact in data){
+            newLi = document.createElement('li');
+            newLi.innerText = data[fact];
+            two.append(newLi);
+        }
+    } catch (e) {
+        console.log('Error: ' + e)
+    }
+}
 
-// async function getMultipleFacts(num){
-//     let promises = []
+async function getMultipleFacts(num){
+    let promises = []
 
-//     try{
-//         for(let i = 0; i < 5; i++){
-//             promises.push(axios.get(`http://www.numbersapi.com/${num}?json`))
-//         }
+    try{
+        for(let i = 0; i < 5; i++){
+            promises.push(axios.get(`http://www.numbersapi.com/${num}?json`))
+        }
 
-//         let facts = await Promise.all(promises)
+        let facts = await Promise.all(promises)
 
-//         for(let fact of facts){
-//             newLi = document.createElement('li');
-//             newLi.innerText = fact.data.text;
-//             three.append(newLi);        
-//     } 
-//     }catch (e) {
-//         console.log('Error: ', e)   
-//     }
-// }
+        for(let fact of facts){
+            newLi = document.createElement('li');
+            newLi.innerText = fact.data.text;
+            three.append(newLi);        
+    } 
+    }catch (e) {
+        console.log('Error: ', e)   
+    }
+}
 
-// getNumberFact(5)
-// getMultipleNumbers(1, 20)
-// getMultipleFacts(56)
+getNumberFact(5)
+getMultipleNumbers(1, 20)
+getMultipleFacts(56)
 
 // part 2
 
